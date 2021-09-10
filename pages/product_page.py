@@ -1,5 +1,5 @@
 """
-Файл для работы со страницей какого-либо продукта
+Файл для работы со страницей какого-либо товара
 """
 from .base_page import BasePage
 from .locators import ProductPageLocators
