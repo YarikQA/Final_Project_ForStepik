@@ -29,7 +29,6 @@ class BasePageLocators:
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
-
 class BasketPageLocarots:
     BASKET_IS_EMPTY_TEXT = (By.CSS_SELECTOR, ".content [id='content_inner'] p")
     BASKET_PRODUCTS = (By.CSS_SELECTOR, ".basket-items .row")
