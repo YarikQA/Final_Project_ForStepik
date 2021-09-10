@@ -65,7 +65,6 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page.go_to_login_page()
 
 
-
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
     page = BasketPage(browser, link)
@@ -75,7 +74,7 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page.basket_empty_have_text_about()
 
 
-@pytest.mark.new
+@pytest.mark.authorised
 class TestUserAddToBasketFromProductPage:
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
