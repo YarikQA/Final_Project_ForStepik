@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
-def pytest_addoption(parser):
+def pytest_addoption(parser):  # возможность выбора языка и браузера
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
     parser.addoption('--language', action='store', default="en",
@@ -28,5 +28,5 @@ def browser(request):
     else:
         raise pytest.UsageError("--You should choose browser: Chrome or Firebox")
     yield browser
-    print("\n\t quit browser..")
+    print("\n\t Quit browser..")
     browser.quit()
